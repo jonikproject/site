@@ -1,0 +1,112 @@
+*
+     margin: 0
+     padding: 0
+     box-sizing: border-box
+
+body
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    color: #777777
+    font-size: 16px
+    letter-spacing: 2px
+    padding: 50px
+    background-color: white
+
+.container
+    background-color: #f7f7f7
+.header
+    position: relative
+    height: 95vh
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)
+    &__logo
+        position: absolute
+        height: 70px
+        width: 56px
+        left: 50px
+        top: 50px
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
+    
+.title-first
+    color: white
+    font-size: 50px
+    font-weight: 800
+    line-height: 60px
+    letter-spacing: 10px
+    margin-bottom: 10px
+    animation-name: leftToRight /* анимация */
+    animation-duration: 2s /* время анимации */
+    animation-delay: 2s /* Задержка анимации */
+    animation-timing-function: ease
+    backface-visibility: hidden
+    span
+        display: block
+        font-size: 40px
+        font-weight: 100
+        line-height: 48px
+        letter-spacing: 5px
+        margin-bottom: 65px
+
+.btn
+    &:link, &visited
+        text-transform: uppercase
+        text-decoration: none
+        color: white
+        padding: 15px 40px
+        background: white
+        border-radius: 50px
+        color: #7f7f7f
+        display: inline-block
+        transition: all .3s
+        position: relative
+    &:hover
+        transform: translateY(-4px)
+        box-shadow:(0px 4px 4px rgba(0, 0, 0, 0.3))
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.6)
+                
+    &:active
+        transform: translateY(-2px)
+        box-shadow:(0px 4px 4px rgba(0, 0, 0, 0.1))
+    &::after /* Псевдоэлемент */
+        content: "" /* Обязательное свойство */
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 50px
+        display: inline-flex
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .4s
+    
+
+    
+
+
+
+@keyframes leftToRight /* Анимация */
+    0%
+        opacity: 0
+        transform: translate(-100px)
+    80%
+        transform: translate(+20px)
+
+
+    100%
+        opacity: 1
+        transform: translate(0px)
+   
+              
+        
+
+    
+    
